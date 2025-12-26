@@ -113,5 +113,5 @@ your_project/
 ```
 
 # Работа приложения
-!![Session Example](https://github.com/hse-python-project/session_example.gif)
+!![Session Example](https://github.com/hse-python-project/example.gif)
 
