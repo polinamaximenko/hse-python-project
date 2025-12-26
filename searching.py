@@ -112,12 +112,3 @@ class SemanticSearch:
 
 if __name__ == "__main__":
     pass
-    # Исходный текст документа
-    #document_text = """
-    #Natural Semantic Metalanguage as a Tool for Mediating Communication.
-    #The CEFR is usually referred to in the context of proficiency indicator scales.
-    #It also pays a lot of attention to interaction, placing it at the intersection
-    #of receptive and productive skills.
-    #"""
-    #semantic_search = SemanticSearch(document_text, query="Что говорится о взаимодействии в CEFR?")
-    #print(semantic_search.context_preparation())
