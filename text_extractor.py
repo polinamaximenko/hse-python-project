@@ -261,12 +261,13 @@ class TextExtractor:
         # Удаляем лишние пробелы
         cleaned_text = re.sub(r'\s+', ' ', text)
         # Сохраняем базовую пунктуацию, удаляем специальные символы
-        cleaned_text = re.sub(r'[^\w\s.,;:!?%-]', '', cleaned_text)
+        cleaned_text = re.sub(r'[^\w\s\n.,;:!?%-]', '', cleaned_text)
 
-        logger.info(f"Извлеченный текст: '{cleaned_text[:150]}...'")
+        logger.info(f"Извлеченный текст: '{cleaned_text[:100]}...{cleaned_text[-100:]}'")
         return cleaned_text.strip()
 
 
 if __name__ == '__main__':
-    extractor = TextExtractor()
-    result = extractor.extract_from_path('example.docx')
+    extractor = TextExtractor(tesseract_cmd_path="Tesseract-OCR/tesseract.exe",
+                              poppler_path="poppler/Library/bin")
+    result = extractor.extract_from_path('examples/example1.jpg')
