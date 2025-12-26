@@ -12,18 +12,11 @@ text_extractor = TextExtractor()
 formatter = AnswerFormatter()
 
 
-#def llm_service(text, question):
-    # интеграция с LLM
-    #print(text)
-    #return f"Ответ на вопрос '{question}' по тексту:"
-
-
-
 @app.route('/')
 def index():
     return render_template('index.html')
 
-
+# Загрузка документа/текста из поля, сохранение в базу
 @app.route('/upload', methods=['POST'])
 def upload():
     text_id = str(uuid.uuid4())
@@ -47,7 +40,7 @@ def upload():
     text_storage[text_id] = text_content
     return jsonify({'text_id': text_id})
 
-
+# Поиск текста по id
 @app.route('/text/<text_id>')
 def get_text(text_id):
     text = text_storage.get(text_id)
@@ -55,7 +48,7 @@ def get_text(text_id):
         return jsonify({'text': ' '.join(text.split()[:150]) + ('...' if len(text.split()) > 150 else '')})
     return jsonify({'error': 'Текст не найден'}), 404
 
-
+# Семантический поиск, обработка запроса LLM
 @app.route('/ask', methods=['POST'])
 def ask():
     data = request.json
@@ -71,8 +64,7 @@ def ask():
 
     found_context = SemanticSearch(text, question)
     context = found_context.context_preparation()
-
-    # вызов LLM
+    
 
     answer_text = formatter.generate_answer(question, context)
     return jsonify({'answer': answer_text})
