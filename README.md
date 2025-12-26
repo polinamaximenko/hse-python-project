@@ -17,22 +17,26 @@
 
 ## Обработка документа
 - Поддерживаемые форматы файлов: PDF, DOCX, DOC, TXT, JPG, JPEG, PNG, BMP, TIFF
-- OCR реализован на pytesseract[https://pypi.org/project/pytesseract/]
+- OCR реализован на [pytesseract](https://pypi.org/project/pytesseract/), поддерживается русский и английский язык
 
-### Инструкция по установке Tesseract-OCR и Poppler
+### Инструкция по установке Tesseract-OCR и Poppler для распознавания PDF и изображений
 #### Windows
-1. Загрузите установочные пакеты по ссылкам:
-https://github.com/UB-Mannheim/tesseract/wiki/
-https://github.com/oschwartz10612/poppler-windows/releases
-2. Установите программы локально
-3. Укажите пути к tesseract.exe (например, C:/Program Files/Tesseract-OCR/tesseract.exe) и poppler/bin в соответсвующем поле
+1. Загрузите установочный пакет [Tesseract v5.5.0.20241111](https://github.com/tesseract-ocr/tesseract/releases/download/5.5.0/tesseract-ocr-w64-setup-5.5.0.20241111.exe) и установите программу в директорию `C:/Program Files/Tesseract-OCR`
+2. Загрузите архив [Poppler v25.12.0-0](https://github.com/oschwartz10612/poppler-windows/releases/tag/v25.12.0-0) и распакуйте его в директорию `C:/Program Files/poppler-25.12.0`
 
-#### Mac/Linux
-1. Установите пакеты с помощью команд:
+#### Linux
+1. Установите программы с помощью команд:
 ```
+sudo apt-get update
 sudo apt-get install tesseract-ocr
+sudo apt install poppler-utils
 ```
-2. Укажите пути к tesseract.exe и poppler/bin в соответсвующем поле
+2. 
+#### Mac
+1. Установите программы с помощью команд:
+```
+brew install poppler
+```
 
 ## Векторизация
 - Эмбеддинги
