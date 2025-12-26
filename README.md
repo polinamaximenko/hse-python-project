@@ -25,16 +25,16 @@
 2. Загрузите архив [Poppler v25.12.0-0](https://github.com/oschwartz10612/poppler-windows/releases/tag/v25.12.0-0) и распакуйте его в директорию `C:/Program Files/poppler-25.12.0`
 
 #### Linux
-1. Установите программы с помощью команд:
+Установите программы с помощью команд:
 ```
 sudo apt-get update
 sudo apt-get install tesseract-ocr
 sudo apt install poppler-utils
 ```
-2. 
 #### Mac
-1. Установите программы с помощью команд:
+Установите программы с помощью команд:
 ```
+brew install tesseract
 brew install poppler
 ```
 
