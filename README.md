@@ -117,11 +117,15 @@
 ```
 
 #### Активируйте виртуальное окружение
-> ##### На Windows:
-> venv\Scripts\activate
+##### На Windows:
+```bash
+venv\Scripts\activate
+```
 
-> ##### На Mac/Linux:
->source venv/bin/activate
+##### На Mac/Linux:
+```bash
+source venv/bin/activate
+```
 
 #### Установите необходимые зависимости
 ```bash
