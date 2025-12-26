@@ -112,6 +112,6 @@ your_project/
   python app.py
 ```
 
-#Работа приложения
+# Работа приложения
 ![](https://github.com/hse-python-project/session_example.gif)
 
