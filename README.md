@@ -66,7 +66,7 @@
 - **После установки Ollama:**
   1. Запустите облачную модель:
   ```bash
-    ollama run gpt-oss:120b-cloud;
+    ollama run gpt-oss:120b-cloud
   ```
   2. войдите в свой аккаунт
   ```bash
