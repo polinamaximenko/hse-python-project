@@ -55,10 +55,12 @@ brew install poppler
 Базируется на RoBERTa, обучена на 4M пар текстов (supervised, synthetic, unsupervised).
 За прошлый месяц модель была скачана 346,248 раз.
 
-- FAISS
+### Семантический поиск — FAISS:
+Для поиска похожих текстов используется библиотека [FAISS](https://github.com/facebookresearch/faiss) от Facebook AI.
+В рамках проекта используется версия FAISS для CPU (Python 3.11).
 
 ## Подключение LLM
-- Модель, параметры: 
+- Модель: gpt-oss:120b-cloud
 - ollama
 
 ## Интерфейс
